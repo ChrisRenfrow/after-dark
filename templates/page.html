@@ -1,5 +1,4 @@
 {% extends "index.html" %}
-{% import "post_macros.html" as post_macros %}
 
 {% block content %}
     {% block header %}
@@ -9,10 +8,18 @@
 <article itemscope itemtype="http://schema.org/BlogPosting">
     <header>
         <h1 itemprop="headline">{{ page.title }}</h1>
-        <span class="muted">{{ post_macros::meta(page=page) }}</span>
+        <span class="muted">{{ post::meta(page=page) }}</span>
     </header>
+    
     <div itemprop="articleBody">
-      {{ page.content | safe }}
+        {% if page.toc %}
+            <div class="toc">
+                {{ toc::toc(toc=page.toc) }}
+            </div>
+        {% endif %}
+        <div>
+            {{ page.content | safe }}
+        </div>
     </div>
 
     {% block page_footer %}

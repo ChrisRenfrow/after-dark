@@ -1,4 +1,5 @@
-{% import "post_macros.html" as post_macros %}
+{% import "macros/post.html" as post %}
+{% import "macros/toc.html" as toc %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +18,10 @@
 
       {% block css %}
           <link rel="stylesheet" href="{{ get_url(path="site.css", trailing_slash=false) | safe }}">
+          {% if config.extra.after_dark_color_scheme -%}
+            {% set scheme = "color_scheme/" ~ config.extra.after_dark_color_scheme ~ ".css" -%}
+            <link rel="stylesheet" href="{{ get_url(path=scheme) }}">
+          {% endif %}
       {% endblock css %}
 
       {% block extra_head %}
@@ -48,7 +53,7 @@
                     </header>
                 {% endif %}
                 {% for page in paginator.pages %}
-                    {{ post_macros::page_in_list(page=page) }}
+                    {{ post::page_in_list(page=page) }}
                 {% endfor %}
 
                 <nav>
