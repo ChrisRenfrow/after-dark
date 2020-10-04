@@ -100,10 +100,15 @@ article [itemprop="summary"] p {
 }
 
 .toc {
-  float: left;
-  margin: 25px 15px 5px 0px; 
+  float: right;
+  margin: 5px; 
   padding: 0px 10px;
   border: solid white thin;
   border-left: double;
   border-right: double;
+}
+@media screen and (max-width: 768px) {
+  .toc {
+    float: none;
+  }
 }
