@@ -1,0 +1,86 @@
+
+// Solarized Color Palette (https://en.wikipedia.org/wiki/Solarized_(color_scheme)#Colors)
+
+$bgcolor:       #002b36;
+$bgcolor-alt:   #073642;
+$darker-text:   #586e75;
+$dark-text:     #657b83;
+$text:          #839496;
+$light-text:    #93a1a1;
+$lighter-text:  #a3aeae; // Added this one
+$yellow:        #b58900;
+$orange:        #cb4b16;
+$red:           #dc322f;
+$magenta:       #d33682;
+$violet:        #6c71c4;
+$blue:          #268bd2;
+$cyan:          #2aa198;
+$green:         #859900;
+
+// Background
+
+.dark, .dark pre {
+    background-color: $bgcolor
+}
+
+// Text
+
+.dark {
+    color: $text
+}
+.dark h1 a, .dark h2 a, .dark h3 a, .dark h4 a, .dark h5 a {
+    color: $lighter-text
+}
+.dark code, .dark strong {
+    color: $light-text
+}
+
+// Anchors
+
+nav a.active {
+    background-color: $magenta;
+    color: $darker-text;
+}
+a[itemprop="url"] {
+    color: $yellow;
+}
+a[itemprop="url"]:hover {
+    color: $darker-text;
+}
+a[href*="://"]::after,
+a[rel*="external"] {
+  content: " " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23b58900'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E");
+}
+a {
+    cursor: pointer;
+    color: $magenta;
+    text-decoration: none;
+    border-bottom: 1px solid $magenta
+}
+a:hover {
+    background-color: $magenta;
+    color: $darker-text
+}
+
+// Tables
+
+.dark table {
+    width: unset;
+    color: $text;
+    border-color: $text;
+    border: 2px solid;
+}
+.dark table th, .dark table td {
+    font-size: unset;
+    font-weight: unset;
+    text-align: left;
+    padding: 10px 5px;
+    border-color: $text;
+}
+.dark table thead th {
+    border-bottom: 4px double;
+}
+.dark table tbody td:first-child {
+    font-weight: unset;
+    color: $text
+}

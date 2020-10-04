@@ -98,3 +98,12 @@ article [itemprop="summary"] p {
     max-width: 50rem;
   }
 }
+
+.toc {
+  float: left;
+  margin: 25px 15px 5px 0px; 
+  padding: 0px 10px;
+  border: solid white thin;
+  border-left: double;
+  border-right: double;
+}
