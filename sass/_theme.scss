@@ -82,8 +82,8 @@ html {
   font-size: 17px;
 }
 article [itemprop="description"], article [itemprop="summary"] {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 2em;
+  margin-top: 0.25em;
 }
 
 article [itemprop="summary"] p {
@@ -104,8 +104,6 @@ article [itemprop="summary"] p {
   margin: 5px; 
   padding: 0px 10px;
   border: solid white thin;
-  border-left: double;
-  border-right: double;
 }
 @media screen and (max-width: 768px) {
   .toc {

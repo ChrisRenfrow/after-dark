@@ -41,6 +41,12 @@ nav a.active {
     background-color: $magenta;
     color: $darker-text;
 }
+nav a:after {
+    content: "| ";
+}
+nav a:last-child:after {
+    content: "";
+}
 a[itemprop="url"] {
     color: $yellow;
 }
@@ -54,8 +60,10 @@ a[rel*="external"] {
 a {
     cursor: pointer;
     color: $magenta;
-    text-decoration: none;
-    border-bottom: 1px solid $magenta
+    text-decoration: underline;
+    text-decoration-color: $magenta;
+    text-decoration-thickness: 1px;
+    border-bottom: none
 }
 a:hover {
     background-color: $magenta;
@@ -83,4 +91,14 @@ a:hover {
 .dark table tbody td:first-child {
     font-weight: unset;
     color: $text
+}
+
+// Muted text color
+.muted {
+    color: $dark-text;
+}
+
+// Table of contents
+.toc {
+    border: solid $text thin;
 }
